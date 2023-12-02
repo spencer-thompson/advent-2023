@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 
 int length(int array[]) {
     int length = 0;
@@ -7,6 +9,12 @@ int length(int array[]) {
         length++;
     }
     return length;
+}
+
+int check_word(char arr[]) {
+    if (strstr(arr, "one") != NULL) {
+        return 0;
+    }
 }
 
 int main() {
@@ -27,6 +35,11 @@ int main() {
         // printf("%s", buffer);
         int j = 0;
         int array[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        
+
+        //check if word is digit
+        //TODO
+
         for (int i = 0; buffer[i] != '\0'; i++) {
             // Check if digit and append as int to array
             if (buffer[i] >= '0' && buffer[i] <= '9') {
